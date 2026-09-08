@@ -2208,3 +2208,28 @@ img {
   }
 
 }
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.social-links a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--pale);
+  color: var(--purple);
+  text-decoration: none;
+  font-size: 17px;
+  transition: all 0.25s ease;
+}
+
+.social-links a:hover {
+  background: var(--bright);
+  color: #fff;
+  transform: translateY(-3px);
+}
