@@ -2233,3 +2233,23 @@ img {
   color: #fff;
   transform: translateY(-3px);
 }
+/* Social icons - mobile fix */
+.social-links {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.social-links a {
+  display: flex !important;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
