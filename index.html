@@ -1,95 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Royalty Hall Schools</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </head>
-    <body>
-        <nav class="navbar">
-            <img src="./assets/images/rhs_logo.jpg" alt="rhs-logo" height="50px">
-            <a href="index.html" class="logo">Royalty Hall Schools</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About us<i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="management.html">Management</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-                <li><a href="register.html" class="register-btn">Register</a></li>
-            </ul>
-            <!-- <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">&#9776;</button> -->
-        </nav>
-        <section>
-            <div class = "landing">
-                <div>
-                    <h1>Royalty <span> Hall </span>Schools. </br><span>Born</span> to Win,</span> </br>Raised to Lead.</h1>
-                </div>    
-                <div>
-                    <p>Building a wholesome child through sound academic education, 
-                        godly spiritual edification, and excellent moral upbringing, 
-                        training them up to be credible leaders of the nations.
-                    </p>
-                </div>
-                <div class="apply-more">
-                    <a href="contact.html" class="apply" >Apply Now!</a>
-                    <a href="about.html" class="more">See More</a>
-                </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Royalty Hall Schools — building wholesome children through academic excellence, spiritual edification and moral upbringing.">
+  <title>Royalty Hall Schools | Born to Win, Raised to Lead</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="brand" aria-label="Royalty Hall Schools home">
+      <img src="./assets/images/rhs_logo.jpg" alt="Royalty Hall Schools logo">
+      <span>Royalty Hall Schools</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About us <i class="fa-solid fa-chevron-down"></i></a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="management.html">Management</a>
+      <a href="contact.html">Contact us</a>
+      <a href="register.html" class="register-btn">Register</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell reveal">
+      <div class="hero-copy">
+        <span class="eyebrow"><i class="fa-solid fa-star"></i> Excellence with purpose</span>
+        <h1>Royalty Hall <span>Schools.</span><br><span>Born</span> to Win,<br>Raised to Lead.</h1>
+        <p>Building a wholesome child through sound academic education, godly spiritual edification, and excellent moral upbringing, training them up to be credible leaders of the nations.</p>
+        <div class="hero-actions">
+          <a href="contact.html" class="btn btn-primary">Apply Now <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="about.html" class="btn btn-secondary">Discover RHS</a>
+        </div>
+        <div class="hero-note"><i class="fa-solid fa-circle-check"></i> A learning environment built around character, confidence and excellence.</div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card premium-carousel" aria-label="Royalty Hall Schools highlights">
+          <div class="carousel-track">
+            <div class="carousel-slide active">
+              <img src="./assets/images/img-1.jpg" alt="Royalty Hall Schools campus">
             </div>
-        </section>
-        <section class="hero-1">
-            <div class = "landing-2">
-                <h1>A Proven Record of </br>Excellence</h1>
+            <div class="carousel-slide">
+              <img src="./assets/images/img-2.jpg" alt="Students at Royalty Hall Schools">
             </div>
-            <div class="box">
-                <div class="box-1">
-                    <h3>20+ Years of Academic Excellence</h3>
-                    <p>A strong track record of academic success and disciplined learning.</p>
-                </div>
-                <div class="box-2">
-                    <h3>100% Certified & Experienced Teachers</h3>
-                    <p>A strong track record of academic success and disciplined learning.</p>
-                </div>
-                <div class="box-3">
-                    <h3>25+ Awards and Achievements</h3>
-                    <p>A strong track record of academic success and disciplined learning.</p>
-                </div>
-            </div>    
-        </section>
-        <section class="hero-2">
-            <div class="box-21">
-                <h1>Why Choose RHS?</h1>
+            <div class="carousel-slide">
+              <img src="./assets/images/img-3.jpg" alt="Learning environment at Royalty Hall Schools">
             </div>
-            <div class="box-23">
-                <p>We go beyond the classroom to raise Godly, well-rounded 
-                    leaders who excel in every sphere of life.</p>
-                    <a href="registeration.html" class="reg">Apply for Admission</a>
+            <div class="carousel-slide">
+              <img src="./assets/images/img-4.jpg" alt="Royalty Hall Schools community">
             </div>
-            <div class="box-22">
-                <div class="box-22-11">
-                    <h3>Academic Excellence</h3>
-                   <p>Consistent top performance in WAEC, NECO, and JAMB examinations.</p> 
-                </div>
-                <div class="box-22-12">
-                    <h3>Moral & Spiritual Values</h3>
-                   <p>Rooted in Christian faith, we mold character alongside intellect.</p> 
-                </div>
-                <div class="box-22-13">
-                    <h3>Safe & Secure Environment</h3>
-                   <p>A serene, gated campus with 24/7 security and pastoral care.</p> 
-                </div>
-                <div class="box-22-14">
-                    <h3>Modern Facilities</h3>
-                   <p>State-of-the-art ICT labs, science laboratories, and library.</p> 
-                </div>
-            </div>
-        </section>
-        <section class="hero-3">
-            <div class="box-31">
-                <p>Government accredited</p>
-            </div>
-        </section>
-    </body>
+          </div>
+
+          <div class="carousel-shade"></div>
+
+          <div class="carousel-topline">
+            <span>ROYALTY HALL SCHOOLS</span>
+            <span class="carousel-count"><b class="current-slide">01</b><i>/</i><span>04</span></span>
+          </div>
+
+          <div class="floating-card">
+            <span class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div><strong>Learn.</strong><small>Grow. Lead.</small></div>
+          </div>
+
+          <div class="carousel-controls">
+            <button class="carousel-btn carousel-prev" type="button" aria-label="Previous image">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="carousel-progress"><span></span></div>
+            <button class="carousel-btn carousel-next" type="button" aria-label="Next image">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats section-shell reveal">
+      <div><strong><span class="counter" data-target="20">0</span>+</strong><span>Years of excellence</span></div>
+      <div><strong><span class="counter" data-target="100">0</span>%</strong><span>Certified & experienced teachers</span></div>
+      <div><strong><span class="counter" data-target="25">0</span>+</strong><span>Awards & achievements</span></div>
+      <div><strong><span class="counter" data-target="1" data-pad="2">00</span></strong><span>Purpose: raise leaders</span></div>
+    </section>
+
+    <section class="excellence section-shell reveal">
+      <div class="section-heading centered">
+        <span class="eyebrow">Our standard</span>
+        <h2>A Proven Record of <span>Excellence</span></h2>
+        <p>We believe education should do more than prepare a child for examinations. It should prepare them for life.</p>
+      </div>
+      <div class="excellence-grid image-excellence-grid">
+
+  <article class="feature-card image-feature-card">
+    <img src="./assets/images/img-1.jpg" alt="Academic Excellence">
+    <div class="feature-image-overlay"></div>
+
+    <div class="feature-number">01</div>
+
+    <div class="feature-card-content">
+      <div class="feature-icon">
+        <i class="fa-solid fa-book-open"></i>
+      </div>
+
+      <h3>Academic Excellence</h3>
+      <p>
+        A strong track record of academic success and disciplined learning.
+      </p>
+    </div>
+  </article>
+
+  <article class="feature-card image-feature-card">
+    <img src="./assets/images/img-2.jpg" alt="Experienced Teachers">
+    <div class="feature-image-overlay"></div>
+
+    <div class="feature-number">02</div>
+
+    <div class="feature-card-content">
+      <div class="feature-icon">
+        <i class="fa-solid fa-chalkboard-user"></i>
+      </div>
+
+      <h3>Experienced Teachers</h3>
+      <p>
+        Dedicated educators committed to helping every learner reach their potential.
+      </p>
+    </div>
+  </article>
+
+  <article class="feature-card image-feature-card">
+    <img src="./assets/images/img-3.jpg" alt="Recognised Achievement">
+    <div class="feature-image-overlay"></div>
+
+    <div class="feature-number">03</div>
+
+    <div class="feature-card-content">
+      <div class="feature-icon">
+        <i class="fa-solid fa-trophy"></i>
+      </div>
+
+      <h3>Recognised Achievement</h3>
+      <p>
+        25+ awards and achievements reflecting a culture of excellence.
+      </p>
+    </div>
+  </article>
+
+</div>
+    </section>
+
+    <section class="why section-shell reveal">
+      <div class="why-intro">
+        <span class="eyebrow">The RHS difference</span>
+        <h2>Why Choose <span>RHS?</span></h2>
+        <p>We go beyond the classroom to raise Godly, well-rounded leaders who excel in every sphere of life.</p>
+        <a href="register.html" class="text-link">Apply for Admission <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="why-grid">
+        <article><span>01</span><i class="fa-solid fa-medal"></i><h3>Academic Excellence</h3><p>Consistent top performance in WAEC, NECO, and JAMB examinations.</p></article>
+        <article><span>02</span><i class="fa-solid fa-heart"></i><h3>Moral & Spiritual Values</h3><p>Rooted in Christian faith, we mold character alongside intellect.</p></article>
+        <article><span>03</span><i class="fa-solid fa-shield-halved"></i><h3>Safe & Secure Environment</h3><p>A serene, gated campus with security and pastoral care.</p></article>
+        <article><span>04</span><i class="fa-solid fa-microchip"></i><h3>Modern Facilities</h3><p>ICT labs, science laboratories and a library that support practical learning.</p></article>
+      </div>
+    </section>
+
+    <section class="campus section-shell reveal">
+      <div class="campus-image"><img src="./assets/images/img-2.jpg" alt="Students and learning environment at Royalty Hall Schools"></div>
+      <div class="campus-copy">
+        <span class="eyebrow">More than a classroom</span>
+        <h2>Where curiosity becomes <span>confidence.</span></h2>
+        <p>At Royalty Hall Schools, learning is designed to be purposeful, engaging and grounded in values that last beyond the school years.</p>
+        <div class="check-list">
+          <div><i class="fa-solid fa-check"></i><span>Structured academic development</span></div>
+          <div><i class="fa-solid fa-check"></i><span>Character and leadership formation</span></div>
+          <div><i class="fa-solid fa-check"></i><span>Practical exposure to modern learning</span></div>
+        </div>
+        <a href="gallery.html" class="btn btn-primary">Explore our school <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+
+    <section class="pathways section-shell reveal">
+      <div class="section-heading">
+        <span class="eyebrow">A complete experience</span>
+        <h2>Built to help every child <span>thrive.</span></h2>
+      </div>
+      <div class="pathway-grid">
+        <article><i class="fa-solid fa-brain"></i><h3>Think</h3><p>Build strong foundations through disciplined academic learning.</p></article>
+        <article><i class="fa-solid fa-person-rays"></i><h3>Grow</h3><p>Develop confidence, character, creativity and healthy values.</p></article>
+        <article><i class="fa-solid fa-people-group"></i><h3>Connect</h3><p>Learn alongside a community that encourages respect and responsibility.</p></article>
+        <article><i class="fa-solid fa-flag"></i><h3>Lead</h3><p>Grow into a responsible young person ready to make an impact.</p></article>
+      </div>
+    </section>
+
+    <section class="admissions section-shell reveal">
+      <div class="admissions-inner">
+        <div>
+          <span class="eyebrow light">Start the journey</span>
+          <h2>Ready to take the <span>next step?</span></h2>
+          <p>Give your child an environment where knowledge, character and purpose can grow together.</p>
+        </div>
+        <a href="register.html" class="btn btn-white">Begin registration <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-main section-shell">
+      <div>
+        <a href="index.html" class="brand footer-brand"><img src="./assets/images/rhs_logo.jpg" alt="Royalty Hall Schools logo"><span>Royalty Hall Schools</span></a>
+        <p>Born to Win, Raised to Lead.</p>
+      </div>
+      <div><h4>Explore</h4><a href="about.html">About us</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
+      <div><h4>School</h4><a href="management.html">Management</a><a href="register.html">Admissions</a><a href="contact.html">Contact us</a></div>
+      <div><h4>Connect</h4><p>Have questions about Royalty Hall Schools?</p><a href="contact.html" class="footer-contact">Get in touch <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+    <div class="footer-bottom section-shell"><span>© 2026 Royalty Hall Schools. All rights reserved.</span><span>Built with purpose.</span></div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', open);
+      menuToggle.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Premium hero carousel
+    const carousel = document.querySelector('.premium-carousel');
+    if (carousel) {
+      const slides = [...carousel.querySelectorAll('.carousel-slide')];
+      const prev = carousel.querySelector('.carousel-prev');
+      const next = carousel.querySelector('.carousel-next');
+      const progress = carousel.querySelector('.carousel-progress span');
+      const current = carousel.querySelector('.current-slide');
+      let active = 0;
+      let timer;
+      const interval = 4500;
+
+      const showSlide = (index, restart = true) => {
+        active = (index + slides.length) % slides.length;
+        slides.forEach((slide, i) => slide.classList.toggle('active', i === active));
+        if (current) current.textContent = String(active + 1).padStart(2, '0');
+        if (progress) {
+          progress.style.transition = 'none';
+          progress.style.width = '0%';
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              progress.style.transition = `width ${interval}ms linear`;
+              progress.style.width = '100%';
+            });
+          });
+        }
+        if (restart) startAuto();
+      };
+
+      const startAuto = () => {
+        clearInterval(timer);
+        timer = setInterval(() => showSlide(active + 1, false), interval);
+      };
+
+      prev.addEventListener('click', () => showSlide(active - 1));
+      next.addEventListener('click', () => showSlide(active + 1));
+
+      carousel.addEventListener('mouseenter', () => clearInterval(timer));
+      carousel.addEventListener('mouseleave', startAuto);
+      carousel.addEventListener('focusin', () => clearInterval(timer));
+      carousel.addEventListener('focusout', startAuto);
+
+      showSlide(0);
+    }
+
+    // Animated statistics counters
+    const stats = document.querySelector('.stats');
+    const counters = document.querySelectorAll('.counter');
+    let countersStarted = false;
+
+    const animateCounters = () => {
+      if (countersStarted) return;
+      countersStarted = true;
+
+      counters.forEach(counter => {
+        const target = Number(counter.dataset.target || 0);
+        const pad = Number(counter.dataset.pad || 0);
+        const duration = 1500;
+        const start = performance.now();
+
+        const tick = now => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          const value = Math.round(target * eased);
+          counter.textContent = String(value).padStart(pad, '0');
+          if (progress < 1) requestAnimationFrame(tick);
+        };
+
+        requestAnimationFrame(tick);
+      });
+    };
+
+    if (stats && 'IntersectionObserver' in window) {
+      const statsObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          animateCounters();
+          statsObserver.disconnect();
+        }
+      }, { threshold: 0.35 });
+      statsObserver.observe(stats);
+    } else {
+      animateCounters();
+    }
+  </script>
+</body>
 </html>
