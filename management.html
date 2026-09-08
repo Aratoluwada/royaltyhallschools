@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Meet the management of Royalty Hall Schools and discover the beliefs that guide our approach to education."
+  >
+
+  <title>Management | Royalty Hall Schools</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
+  <style>
+    /* =========================================================
+       MANAGEMENT PAGE
+       Uses the existing Royalty Hall Schools design system
+    ========================================================= */
+
+    /* .management-page {
+      /* overflow: hidden; */
+    /* } */ */
+
+    /* HERO */
+
+    .management-hero {
+      position: relative;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      margin: 0;
+      background: var(--purple);
+      isolation: isolate;
+    }
+
+    .management-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(40, 2, 71, .94),
+          rgba(40, 2, 71, .72),
+          rgba(40, 2, 71, .35)
+        ),
+        url("./assets/images/img-3.jpg") center / cover no-repeat;
+
+      transform: scale(1.02);
+    }
+
+    .management-hero-content {
+      width: min(1180px, calc(100% - 60px));
+      margin-inline: auto;
+      padding: 130px 0 90px;
+      color: var(--white);
+    }
+
+    .management-hero .eyebrow {
+      color: var(--lavender);
+    }
+
+    .management-hero h1 {
+      max-width: 850px;
+      margin: 0;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(48px, 6vw, 76px);
+      line-height: .98;
+      letter-spacing: -3px;
+    }
+
+    .management-hero h1 span {
+      color: var(--bright);
+    }
+
+    .management-hero p {
+      max-width: 650px;
+      margin-top: 25px;
+
+      color: rgba(255,255,255,.82);
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+
+    /* INTRO */
+
+    .management-intro {
+      padding: 100px 0 70px;
+    }
+
+    .management-intro-inner {
+      width: min(800px, calc(100% - 60px));
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .management-intro h2 {
+      margin: 0 0 20px;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(35px, 5vw, 55px);
+      line-height: 1;
+      letter-spacing: -2px;
+      color: var(--purple);
+    }
+
+    .management-intro h2 span {
+      color: var(--bright);
+    }
+
+    .management-intro p {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+
+    /* LEADERS */
+
+    .management-leaders {
+      padding: 40px 0 110px;
+    }
+
+    .management-leader {
+      width: min(1180px, calc(100% - 60px));
+      margin: 0 auto 100px;
+
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .management-leader:last-child {
+      margin-bottom: 0;
+    }
+
+    .management-leader.reverse {
+      grid-template-columns: 1.1fr .9fr;
+    }
+
+    .management-leader.reverse .management-leader-image {
+      order: 2;
+    }
+
+    .management-leader.reverse .management-leader-content {
+      order: 1;
+    }
+
+
+    /* IMAGE */
+
+    .management-leader-image {
+      position: relative;
+      height: 520px;
+      overflow: hidden;
+
+      border-radius: 26px;
+      background: var(--pale);
+      box-shadow: var(--shadow);
+    }
+
+    .management-leader-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
+        to top,
+        rgba(40,2,71,.25),
+        transparent 45%
+      );
+
+      pointer-events: none;
+    }
+
+    .management-leader-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform .6s ease;
+    }
+
+    .management-leader:hover .management-leader-image img {
+      transform: scale(1.04);
+    }
+
+
+    /* CONTENT */
+
+    .management-role {
+      display: inline-block;
+      margin-bottom: 15px;
+
+      color: var(--bright);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .management-leader-content h2 {
+      margin: 0 0 20px;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1;
+      letter-spacing: -2px;
+
+      color: var(--purple);
+    }
+
+    .management-leader-content p {
+      max-width: 620px;
+      margin-bottom: 18px;
+
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.85;
+    }
+
+    .management-leader-line {
+      width: 55px;
+      height: 3px;
+      margin-top: 28px;
+
+      background: var(--bright);
+      border-radius: 10px;
+    }
+
+
+    /* BELIEFS */
+
+    .beliefs {
+      padding: 110px 0 120px;
+      background: var(--purple);
+      color: var(--white);
+    }
+
+    .beliefs-heading {
+      width: min(750px, calc(100% - 60px));
+      margin: 0 auto 60px;
+      text-align: center;
+    }
+
+    .beliefs-heading .eyebrow {
+      color: var(--lavender);
+    }
+
+    .beliefs-heading h2 {
+      margin: 0 0 20px;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .beliefs-heading h2 span {
+      color: var(--bright);
+    }
+
+    .beliefs-heading p {
+      color: rgba(255,255,255,.72);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .beliefs-grid {
+      width: min(1180px, calc(100% - 60px));
+      margin-inline: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .belief-card {
+      min-height: 280px;
+      padding: 30px;
+
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 20px;
+
+      background: rgba(255,255,255,.055);
+
+      transition:
+        transform .25s ease,
+        background .25s ease,
+        border-color .25s ease;
+    }
+
+    .belief-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,.09);
+      border-color: rgba(255,255,255,.22);
+    }
+
+    .belief-number {
+      display: block;
+      margin-bottom: 25px;
+
+      color: var(--bright);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .belief-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 22px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 13px;
+      background: rgba(140,3,252,.16);
+      color: var(--lavender);
+      font-size: 17px;
+    }
+
+    .belief-card h3 {
+      margin: 0 0 12px;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      line-height: 1.2;
+      color: var(--white);
+    }
+
+    .belief-card p {
+      margin: 0;
+
+      color: rgba(255,255,255,.67);
+      font-size: 13px;
+      line-height: 1.75;
+    }
+
+
+    /* PHILOSOPHY */
+
+    .management-philosophy {
+      padding: 110px 0;
+      background: var(--pale);
+    }
+
+    .management-philosophy-inner {
+      width: min(900px, calc(100% - 60px));
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .management-philosophy-mark {
+      width: 58px;
+      height: 58px;
+      margin: 0 auto 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+      background: var(--purple);
+      color: var(--white);
+
+      font-family: Georgia, serif;
+      font-size: 28px;
+    }
+
+    .management-philosophy blockquote {
+      margin: 0;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(27px, 4vw, 45px);
+      line-height: 1.25;
+      letter-spacing: -1.5px;
+
+      color: var(--purple);
+    }
+
+    .management-philosophy cite {
+      display: block;
+      margin-top: 20px;
+
+      color: var(--muted);
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+
+    /* CTA */
+
+    .management-cta {
+      padding: 100px 0;
+      background: var(--white);
+    }
+
+    .management-cta-inner {
+      width: min(850px, calc(100% - 60px));
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .management-cta h2 {
+      margin: 0 0 18px;
+
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(32px, 5vw, 50px);
+      line-height: 1;
+      letter-spacing: -2px;
+
+      color: var(--purple);
+    }
+
+    .management-cta p {
+      max-width: 600px;
+      margin: 0 auto 28px;
+
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .management-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 14px 23px;
+
+      border-radius: 11px;
+      background: var(--purple);
+      color: var(--white);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      transition: .25s ease;
+    }
+
+    .management-cta a:hover {
+      background: var(--bright);
+      transform: translateY(-3px);
+    }
+
+
+    /* =========================================================
+       MANAGEMENT PAGE — RESPONSIVE
+    ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .management-hero-content {
+        padding-top: 110px;
+      }
+
+      .management-leader,
+      .management-leader.reverse {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .management-leader.reverse .management-leader-image,
+      .management-leader.reverse .management-leader-content {
+        order: initial;
+      }
+
+      .management-leader-image {
+        height: 480px;
+      }
+
+      .beliefs-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .management-hero {
+        min-height: 560px;
+      }
+
+      .management-hero-content {
+        width: calc(100% - 30px);
+        padding-top: 100px;
+        padding-bottom: 70px;
+      }
+
+      .management-hero h1 {
+        font-size: 45px;
+        letter-spacing: -2px;
+      }
+
+      .management-hero p {
+        font-size: 14px;
+      }
+
+      .management-intro {
+        padding: 75px 0 45px;
+      }
+
+      .management-intro-inner {
+        width: calc(100% - 30px);
+      }
+
+      .management-intro h2 {
+        font-size: 38px;
+        letter-spacing: -1.5px;
+      }
+
+      .management-intro p {
+        font-size: 14px;
+      }
+
+      .management-leaders {
+        padding: 30px 0 80px;
+      }
+
+      .management-leader,
+      .management-leader.reverse {
+        width: calc(100% - 30px);
+        gap: 32px;
+        margin-bottom: 75px;
+      }
+
+      .management-leader-image {
+        height: 400px;
+        border-radius: 20px;
+      }
+
+      .management-leader-content h2 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+      }
+
+      .management-leader-content p {
+        font-size: 14px;
+      }
+
+      .beliefs {
+        padding: 80px 0;
+      }
+
+      .beliefs-heading {
+        width: calc(100% - 30px);
+        margin-bottom: 40px;
+      }
+
+      .beliefs-heading h2 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+      }
+
+      .beliefs-heading p {
+        font-size: 14px;
+      }
+
+      .beliefs-grid {
+        width: calc(100% - 30px);
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .belief-card {
+        min-height: auto;
+        padding: 27px;
+      }
+
+      .management-philosophy {
+        padding: 80px 0;
+      }
+
+      .management-philosophy-inner {
+        width: calc(100% - 30px);
+      }
+
+      .management-philosophy blockquote {
+        font-size: 26px;
+      }
+
+      .management-cta {
+        padding: 80px 0;
+      }
+
+      .management-cta-inner {
+        width: calc(100% - 30px);
+      }
+    }
+  </style>
+</head>
+
+<body class="management-page">
+
+  <!-- =====================================================
+       NAVBAR
+       EXACT SAME STRUCTURE AS index.html
+  ====================================================== -->
+
+  <header class="navbar">
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Royalty Hall Schools home"
+    >
+      <img
+        src="./assets/images/rhs_logo.jpg"
+        alt="Royalty Hall Schools logo"
+      >
+
+      <span>
+        Royalty Hall Schools
+      </span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav
+      class="nav-links"
+      id="navLinks"
+      aria-label="Main navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About us
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <a href="gallery.html">
+        Gallery
+      </a>
+
+      <a href="blog.html">
+        Blog
+      </a>
+
+      <a href="management.html" class="active">
+        Management
+      </a>
+
+      <a href="contact.html">
+        Contact us
+      </a>
+
+      <a href="register.html" class="register-btn">
+        Register
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="management-hero">
+
+      <div class="management-hero-bg"></div>
+
+      <div class="management-hero-content">
+
+        <span class="eyebrow">
+          <i class="fa-solid fa-users"></i>
+          Our Management
+        </span>
+
+        <h1>
+          Leadership with
+          <span>purpose.</span>
+        </h1>
+
+        <p>
+          Meet the people providing leadership and direction at
+          Royalty Hall Schools, and discover the beliefs that shape
+          our approach to raising wholesome children.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
+
+    <section class="management-intro">
+
+      <div class="management-intro-inner">
+
+        <span class="eyebrow">
+          The people behind RHS
+        </span>
+
+        <h2>
+          Guiding the journey from <span>learning</span> to leadership.
+        </h2>
+
+        <p>
+          At Royalty Hall Schools, we believe that meaningful education
+          requires purposeful leadership. Our management is committed to
+          creating an environment where children are encouraged to grow
+          academically, spiritually, morally and socially.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LEADERS
+    ====================================================== -->
+
+    <section class="management-leaders">
+
+
+      <!-- PROPRIETOR -->
+
+      <article class="management-leader">
+
+        <div class="management-leader-image">
+
+          <img
+            src="./assets/images/img-1.jpg"
+            alt="Joy Toluwade, Proprietor of Royalty Hall Schools"
+          >
+
+        </div>
+
+        <div class="management-leader-content">
+
+          <span class="management-role">
+            Proprietor
+          </span>
+
+          <h2>
+            Joy Toluwade
+          </h2>
+
+          <p>
+            As the Proprietor of Royalty Hall Schools, Joy Toluwade
+            provides the vision and leadership that guide the school's
+            commitment to quality education and the wholesome development
+            of every child.
+          </p>
+
+          <p>
+            Her leadership reflects the school's belief that education
+            should extend beyond academic achievement, helping children
+            develop positive attitudes, sound values and the character
+            needed to become responsible members of society.
+          </p>
+
+          <div class="management-leader-line"></div>
+
+        </div>
+
+      </article>
+
+
+      <!-- DIRECTOR -->
+
+      <article class="management-leader reverse">
+
+        <div class="management-leader-image">
+
+          <img
+            src="./assets/images/img-2.jpg"
+            alt="Rev Peace Toluwade, Director of Royalty Hall Schools"
+          >
+
+        </div>
+
+        <div class="management-leader-content">
+
+          <span class="management-role">
+            Director
+          </span>
+
+          <h2>
+            Rev Peace Toluwade
+          </h2>
+
+          <p>
+            As the Director of Royalty Hall Schools, Rev Peace Toluwade
+            contributes to the leadership and direction of the school,
+            helping to foster an environment where academic development,
+            godly values and excellent character go hand in hand.
+          </p>
+
+          <p>
+            The school's Christ-centred approach to education is reflected
+            in its emphasis on spiritual edification, moral upbringing,
+            discipline, respect and peaceful coexistence.
+          </p>
+
+          <div class="management-leader-line"></div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- =====================================================
+         BELIEFS
+    ====================================================== -->
+
+    <section class="beliefs">
+
+      <div class="beliefs-heading">
+
+        <span class="eyebrow">
+          Our Foundation
+        </span>
+
+        <h2>
+          What We <span>Believe</span>
+        </h2>
+
+        <p>
+          These principles influence the way we teach, nurture and
+          interact with every child within the Royalty Hall Schools
+          community.
+        </p>
+
+      </div>
+
+
+      <div class="beliefs-grid">
+
+
+        <article class="belief-card">
+
+          <span class="belief-number">
+            01
+          </span>
+
+          <div class="belief-icon">
+            <i class="fa-solid fa-child"></i>
+          </div>
+
+          <h3>
+            Every Child Can Thrive
+          </h3>
+
+          <p>
+            We believe every child deserves the opportunity to discover
+            their abilities, develop confidence and receive quality
+            education regardless of background.
+          </p>
+
+        </article>
+
+
+        <article class="belief-card">
+
+          <span class="belief-number">
+            02
+          </span>
+
+          <div class="belief-icon">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+
+          <h3>
+            Education Builds the Whole Person
+          </h3>
+
+          <p>
+            Academic excellence matters, but so do character, discipline,
+            positive attitudes, spiritual growth and practical life skills.
+          </p>
+
+        </article>
+
+
+        <article class="belief-card">
+
+          <span class="belief-number">
+            03
+          </span>
+
+          <div class="belief-icon">
+            <i class="fa-solid fa-cross"></i>
+          </div>
+
+          <h3>
+            Faith Shapes Character
+          </h3>
+
+          <p>
+            We believe Christian values should guide children toward
+            integrity, compassion, responsibility and respect for others.
+          </p>
+
+        </article>
+
+
+        <article class="belief-card">
+
+          <span class="belief-number">
+            04
+          </span>
+
+          <div class="belief-icon">
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <h3>
+            Excellence Is a Standard
+          </h3>
+
+          <p>
+            We encourage children to approach learning and everyday life
+            with diligence, curiosity and a commitment to doing their best.
+          </p>
+
+        </article>
+
+
+        <article class="belief-card">
+
+          <span class="belief-number">
+            05
+          </span>
+
+          <div class="belief-icon">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+
+          <h3>
+            Parents and School Are Partners
+          </h3>
+
+          <p>
+            We believe meaningful education is strengthened when parents
+            and teachers work together in the best interest of the child.
+          </p>
+
+        </article>
+
+
+        <article class="belief-card">
+
+          <span class="belief-number">
+            06
+          </span>
+
+          <div class="belief-icon">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+          </div>
+
+          <h3>
+            Every Child Deserves Respect
+          </h3>
+
+          <p>
+            We promote an environment where children are treated with
+            dignity, encouraged to coexist peacefully and protected from
+            bullying.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PHILOSOPHY
+    ====================================================== -->
+
+    <section class="management-philosophy">
+
+      <div class="management-philosophy-inner">
+
+        <div class="management-philosophy-mark">
+          “
+        </div>
+
+        <blockquote>
+          Total education for all children from all walks of life.
+        </blockquote>
+
+        <cite>
+          The philosophy of Royalty Hall Schools
+        </cite>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CTA
+    ====================================================== -->
+
+    <section class="management-cta">
+
+      <div class="management-cta-inner">
+
+        <h2>
+          Education with purpose.
+        </h2>
+
+        <p>
+          At Royalty Hall Schools, we remain committed to building
+          wholesome children through sound academic education, godly
+          spiritual edification and excellent moral upbringing.
+        </p>
+
+        <a href="contact.html">
+          Get in touch
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+
+
+<footer class="footer">
+  <div class="footer-main section-shell">
+
+      <div>
+
+        <a
+          href="index.html"
+          class="brand"
+        >
+          <img
+            src="./assets/images/rhs_logo.jpg"
+            alt="Royalty Hall Schools logo"
+          >
+
+          <span>
+            Royalty Hall Schools
+          </span>
+        </a>
+
+        <p>
+          Building wholesome children through sound academic education,
+          godly spiritual edification and excellent moral upbringing.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Quick Links
+        </h4>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="management.html">Management</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact us</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Contact
+        </h4>
+
+        <p>
+          9, Graceland Street,
+          <br>
+          (Former Sarkis Building),
+          <br>
+          Off Somorin Street,
+          <br>
+          Obantoko, Abeokuta.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>
+          Connect
+        </h4>
+
+        <p>
+          Have questions about Royalty Hall Schools?
+        </p>
+
+        <a
+          href="contact.html"
+          class="footer-contact"
+        >
+          Get in touch
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="social-links">
+
+          <a
+            href="https://wa.me/+2348032084172"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61563866310341"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom section-shell">
+
+      <p>
+        © 2026 Royalty Hall Schools. All rights reserved.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =====================================================
+       MOBILE NAVIGATION
+  ====================================================== -->
+
+  <script>
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+
+      menuToggle.addEventListener("click", () => {
+
+        const isOpen =
+          navLinks.classList.toggle("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+        menuToggle.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+
+      });
+
+
+      navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+        });
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>

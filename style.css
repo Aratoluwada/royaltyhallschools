@@ -2253,3 +2253,65 @@ img {
   visibility: visible !important;
   opacity: 1 !important;
 }
+/* =========================================================
+   FOOTER SOCIAL LINKS
+========================================================= */
+
+.social-links {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.social-links a {
+  width: 42px;
+  height: 42px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  border-radius: 50%;
+  background: var(--pale);
+  color: var(--purple);
+
+  text-decoration: none;
+  font-size: 17px;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.social-links a:hover {
+  background: var(--bright);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+
+/* Mobile footer */
+@media (max-width: 600px) {
+
+  .social-links {
+    display: flex !important;
+    width: 100%;
+    margin-top: 18px;
+  }
+
+  .social-links a {
+    display: flex !important;
+    width: 42px;
+    height: 42px;
+  }
+
+}
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
