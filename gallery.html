@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Royalty Hall Schools</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    /* =========================================================
+       GALLERY PAGE
+    ========================================================= */
+
+    /* .gallery-page {
+      overflow: hidden;
+    } */
+
+    /* HERO
+    --------------------------------------------------------- */
+
+    .gallery-hero {
+      min-height: 72vh;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      margin: 0 15px;
+      border-radius: 0 0 34px 34px;
+      overflow: hidden;
+      background: var(--purple);
+    }
+
+    .gallery-hero-image {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(25, 0, 44, .88) 0%,
+          rgba(25, 0, 44, .48) 48%,
+          rgba(25, 0, 44, .12) 100%
+        ),
+        url("./assets/images/img-8.jpg") center/cover no-repeat;
+      transform: scale(1.03);
+      animation: galleryHeroZoom 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes galleryHeroZoom {
+      from {
+        transform: scale(1.03);
+      }
+
+      to {
+        transform: scale(1.10);
+      }
+    }
+
+    .gallery-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 760px;
+      padding: 90px 7vw 75px;
+      color: var(--white);
+    }
+
+    .gallery-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 22px;
+    }
+
+    .gallery-eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--bright);
+    }
+
+    .gallery-hero h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(52px, 8vw, 105px);
+      line-height: .9;
+      letter-spacing: -.055em;
+      margin: 0;
+    }
+
+    .gallery-hero h1 span {
+      color: #d3bde6;
+    }
+
+    .gallery-hero p {
+      max-width: 560px;
+      margin: 28px 0 0;
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(255,255,255,.78);
+    }
+
+    .gallery-hero-number {
+      position: absolute;
+      right: 6vw;
+      bottom: 55px;
+      z-index: 2;
+      color: rgba(255,255,255,.16);
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(80px, 14vw, 190px);
+      font-weight: 700;
+      line-height: .7;
+      pointer-events: none;
+    }
+
+
+    /* INTRO
+    --------------------------------------------------------- */
+
+    .gallery-intro {
+      padding-top: 100px;
+      padding-bottom: 45px;
+    }
+
+    .gallery-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.8fr;
+      gap: 70px;
+      align-items: end;
+    }
+
+    .gallery-intro-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-weight: 700;
+      color: var(--bright);
+    }
+
+    .gallery-intro h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(35px, 5vw, 62px);
+      line-height: 1;
+      letter-spacing: -.045em;
+      margin: 12px 0 0;
+      color: var(--purple);
+    }
+
+    .gallery-intro-copy {
+      max-width: 610px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+
+    /* FILTER BAR
+    --------------------------------------------------------- */
+
+    .gallery-controls {
+      padding: 10px 0 55px;
+    }
+
+    .gallery-controls-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0;
+    }
+
+    .gallery-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .gallery-filter {
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--muted);
+      padding: 9px 15px;
+      border-radius: 100px;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .gallery-filter:hover,
+    .gallery-filter.active {
+      background: var(--purple);
+      color: var(--white);
+    }
+
+    .shuffle-btn {
+      border: 1px solid var(--line);
+      background: var(--white);
+      color: var(--purple);
+      border-radius: 100px;
+      padding: 10px 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .shuffle-btn:hover {
+      background: var(--bright);
+      border-color: var(--bright);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+
+    /* FEATURED MOMENT
+    --------------------------------------------------------- */
+
+    .featured-moment {
+      margin-bottom: 80px;
+    }
+
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1.45fr .75fr;
+      min-height: 510px;
+      background: var(--purple);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .featured-image {
+      min-height: 510px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .8s ease;
+    }
+
+    .featured-card:hover .featured-image img {
+      transform: scale(1.045);
+    }
+
+    .featured-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(0,0,0,.35)
+      );
+      pointer-events: none;
+    }
+
+    .featured-tag {
+      position: absolute;
+      left: 25px;
+      top: 25px;
+      z-index: 2;
+      background: var(--white);
+      color: var(--purple);
+      padding: 8px 13px;
+      border-radius: 100px;
+      font-size: 9px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+    }
+
+    .featured-info {
+      padding: 55px 45px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--white);
+    }
+
+    .featured-info small {
+      color: #d3bde6;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .featured-info h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin: 15px 0 20px;
+    }
+
+    .featured-info p {
+      color: rgba(255,255,255,.68);
+      font-size: 12px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    .featured-open {
+      margin-top: 35px;
+      width: fit-content;
+      border: 0;
+      background: var(--bright);
+      color: var(--white);
+      padding: 13px 18px;
+      border-radius: 100px;
+      font: inherit;
+      font-size: 10px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .featured-open:hover {
+      transform: translateY(-3px);
+    }
+
+
+    /* MASONRY GALLERY
+    --------------------------------------------------------- */
+
+    .gallery-section-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .gallery-section-heading h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -.04em;
+      margin: 0;
+    }
+
+    .gallery-section-heading p {
+      max-width: 320px;
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.7;
+      margin: 0;
+      text-align: right;
+    }
+
+    .gallery-masonry {
+      columns: 3 280px;
+      column-gap: 18px;
+    }
+
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 18px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--purple);
+      opacity: 0;
+      transform: translateY(25px);
+      animation: galleryReveal .7s ease forwards;
+    }
+
+    .gallery-item:nth-child(2) { animation-delay: .05s; }
+    .gallery-item:nth-child(3) { animation-delay: .1s; }
+    .gallery-item:nth-child(4) { animation-delay: .15s; }
+    .gallery-item:nth-child(5) { animation-delay: .2s; }
+    .gallery-item:nth-child(6) { animation-delay: .25s; }
+    .gallery-item:nth-child(7) { animation-delay: .3s; }
+    .gallery-item:nth-child(8) { animation-delay: .35s; }
+    .gallery-item:nth-child(9) { animation-delay: .4s; }
+
+    @keyframes galleryReveal {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform .6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 22px;
+      background: linear-gradient(
+        transparent 40%,
+        rgba(25,0,44,.86)
+      );
+      opacity: 0;
+      transition: opacity .3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay-content {
+      color: var(--white);
+    }
+
+    .gallery-overlay-content span {
+      display: block;
+      color: #d3bde6;
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .gallery-overlay-content strong {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 18px;
+    }
+
+    .gallery-expand {
+      position: absolute;
+      right: 17px;
+      top: 17px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+      color: var(--purple);
+      font-size: 11px;
+    }
+
+
+    /* LIGHTBOX
+    --------------------------------------------------------- */
+
+    .gallery-lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(25,0,44,.96);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .gallery-lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-image-wrap {
+      position: relative;
+      max-width: 1100px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 25px;
+      right: 28px;
+      width: 44px;
+      height: 44px;
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 50%;
+      background: transparent;
+      color: var(--white);
+      cursor: pointer;
+      font-size: 16px;
+      z-index: 3;
+    }
+
+    .lightbox-close:hover {
+      background: var(--white);
+      color: var(--purple);
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.25);
+      background: rgba(255,255,255,.08);
+      color: var(--white);
+      cursor: pointer;
+      z-index: 3;
+    }
+
+    .lightbox-prev {
+      left: 25px;
+    }
+
+    .lightbox-next {
+      right: 25px;
+    }
+
+    .lightbox-prev:hover,
+    .lightbox-next:hover {
+      background: var(--white);
+      color: var(--purple);
+    }
+
+    .lightbox-caption {
+      position: fixed;
+      left: 50%;
+      bottom: 25px;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,.75);
+      font-size: 11px;
+      text-align: center;
+    }
+
+
+    /* CTA
+    --------------------------------------------------------- */
+
+    .gallery-cta {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      background: var(--bright);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 65px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 35px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery-cta::after {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 50%;
+      right: -80px;
+      top: -130px;
+    }
+
+    .gallery-cta h2 {
+      position: relative;
+      z-index: 1;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(32px, 5vw, 58px);
+      line-height: .95;
+      letter-spacing: -.045em;
+      margin: 0;
+      max-width: 650px;
+    }
+
+    .gallery-cta a {
+      position: relative;
+      z-index: 1;
+      background: var(--white);
+      color: var(--purple);
+      padding: 15px 21px;
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: .25s ease;
+    }
+
+    .gallery-cta a:hover {
+      transform: translateY(-3px);
+    }
+
+
+    /* MOBILE
+    --------------------------------------------------------- */
+
+    @media (max-width: 900px) {
+
+      .gallery-hero {
+        min-height: 65vh;
+      }
+
+      .gallery-hero-content {
+        padding: 75px 30px 55px;
+      }
+
+      .gallery-hero-number {
+        display: none;
+      }
+
+      .gallery-intro-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .gallery-controls-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .featured-card {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-image {
+        min-height: 420px;
+      }
+
+      .featured-info {
+        padding: 40px 30px;
+      }
+
+      .gallery-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .gallery-section-heading p {
+        text-align: left;
+      }
+
+      .gallery-cta {
+        padding: 45px 30px;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+
+    @media (max-width: 600px) {
+
+      .gallery-hero {
+        margin: 0;
+        border-radius: 0 0 24px 24px;
+        min-height: 68vh;
+      }
+
+      .gallery-hero-content {
+        padding: 60px 22px 45px;
+      }
+
+      .gallery-hero h1 {
+        font-size: 55px;
+      }
+
+      .gallery-hero p {
+        font-size: 13px;
+      }
+
+      .gallery-intro {
+        padding-top: 70px;
+      }
+
+      .gallery-intro h2 {
+        font-size: 38px;
+      }
+
+      .gallery-filters {
+        gap: 4px;
+      }
+
+      .gallery-filter {
+        padding: 8px 11px;
+        font-size: 9px;
+      }
+
+      .featured-card {
+        border-radius: 20px;
+      }
+
+      .featured-image {
+        min-height: 300px;
+      }
+
+      .featured-info {
+        padding: 32px 25px;
+      }
+
+      .featured-info h3 {
+        font-size: 32px;
+      }
+
+      .gallery-masonry {
+        columns: 2 150px;
+        column-gap: 10px;
+      }
+
+      .gallery-item {
+        margin-bottom: 10px;
+        border-radius: 13px;
+      }
+
+      .gallery-overlay {
+        opacity: 1;
+        padding: 12px;
+        background: linear-gradient(
+          transparent 40%,
+          rgba(25,0,44,.72)
+        );
+      }
+
+      .gallery-overlay-content strong {
+        font-size: 13px;
+      }
+
+      .gallery-expand {
+        width: 28px;
+        height: 28px;
+        right: 9px;
+        top: 9px;
+        font-size: 9px;
+      }
+
+      .gallery-cta {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        border-radius: 20px;
+        padding: 38px 24px;
+      }
+
+      .gallery-cta h2 {
+        font-size: 38px;
+      }
+
+      .lightbox-prev,
+      .lightbox-next {
+        width: 38px;
+        height: 38px;
+      }
+
+      .lightbox-prev {
+        left: 10px;
+      }
+
+      .lightbox-next {
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body class="gallery-page">
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+
+    <a href="index.html" class="brand" aria-label="Royalty Hall Schools home">
+      <img
+        src="./assets/images/rhs_logo.jpg"
+        alt="Royalty Hall Schools logo"
+      >
+      <span>Royalty Hall Schools</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+
+      <a href="index.html">Home</a>
+
+      <a href="about.html">
+        About us
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <a href="gallery.html" class="active">Gallery</a>
+
+      <a href="facilities.html">Facilities</a>
+
+      <a href="management.html">Management</a>
+
+      <a href="contact.html">Contact us</a>
+
+      <a href="register.html" class="register-btn">
+        Register
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main>
+
+    <!-- HERO -->
+    <section class="gallery-hero">
+
+      <div class="gallery-hero-image"></div>
+
+      <div class="gallery-hero-content">
+
+        <div class="gallery-eyebrow">
+          Life at Royalty Hall
+        </div>
+
+        <h1>
+          Moments<br>
+          <span>worth keeping.</span>
+        </h1>
+
+        <p>
+          From classroom discoveries to unforgettable school moments,
+          every picture tells a little part of the Royalty Hall story.
+        </p>
+
+      </div>
+
+      <div class="gallery-hero-number">
+        22
+      </div>
+
+    </section>
+
+
+    <!-- INTRO -->
+    <section class="gallery-intro section-shell">
+
+      <div class="gallery-intro-grid">
+
+        <div>
+          <span class="gallery-intro-label">
+            Our Gallery
+          </span>
+
+          <h2>
+            More than<br>
+            just pictures.
+          </h2>
+        </div>
+
+        <p class="gallery-intro-copy">
+          School is made up of thousands of little moments — a new idea
+          understood, a friendship made, a project completed, a celebration
+          shared. This is where we keep some of those moments.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTROLS -->
+    <section class="gallery-controls section-shell">
+
+      <div class="gallery-controls-inner">
+
+        <div class="gallery-filters">
+
+          <button class="gallery-filter active" data-filter="all">
+            All moments
+          </button>
+
+          <button class="gallery-filter" data-filter="learning">
+            Learning
+          </button>
+
+          <button class="gallery-filter" data-filter="activities">
+            Activities
+          </button>
+
+          <button class="gallery-filter" data-filter="events">
+            Events
+          </button>
+
+          <button class="gallery-filter" data-filter="school-life">
+            School life
+          </button>
+
+        </div>
+
+        <button class="shuffle-btn" id="shuffleBtn">
+          <i class="fa-solid fa-shuffle"></i>
+          Shuffle
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- FEATURED -->
+    <section class="featured-moment section-shell">
+
+      <div class="featured-card">
+
+        <div class="featured-image">
+
+          <span class="featured-tag">
+            Featured moment
+          </span>
+
+          <img
+            id="featuredImage"
+            src="./assets/images/img-8.jpg"
+            alt="Royalty Hall Schools"
+          >
+
+        </div>
+
+        <div class="featured-info">
+
+          <small>Royalty Hall Schools</small>
+
+          <h3 id="featuredTitle">
+            Where learning becomes a memory.
+          </h3>
+
+          <p id="featuredText">
+            Every school day brings something new to discover,
+            experience and remember.
+          </p>
+
+          <button class="featured-open" id="featuredOpen">
+            Open moment
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MASONRY -->
+    <section class="section-shell">
+
+      <div class="gallery-section-heading">
+
+        <div>
+          <span class="gallery-intro-label">
+            The collection
+          </span>
+
+          <h2>
+            Life in motion.
+          </h2>
+        </div>
+
+        <p>
+          A collection of moments from around the school.
+          Click any image to take a closer look.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-masonry" id="galleryGrid">
+
+        <article
+          class="gallery-item"
+          data-category="learning"
+          data-title="Learning together"
+          data-image="./assets/images/img-1.jpg"
+        >
+          <img src="./assets/images/img-1.jpg" alt="Learning together">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Learning</span>
+              <strong>Learning together</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="activities"
+          data-title="Making memories"
+          data-image="./assets/images/img-2.jpg"
+        >
+          <img src="./assets/images/img-2.jpg" alt="Making memories">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Activities</span>
+              <strong>Making memories</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="school-life"
+          data-title="A day at Royalty Hall"
+          data-image="./assets/images/img-3.jpg"
+        >
+          <img src="./assets/images/img-3.jpg" alt="A day at Royalty Hall">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>School life</span>
+              <strong>A day at Royalty Hall</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="events"
+          data-title="Celebrating together"
+          data-image="./assets/images/img-4.jpg"
+        >
+          <img src="./assets/images/img-4.jpg" alt="Celebrating together">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Events</span>
+              <strong>Celebrating together</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="learning"
+          data-title="Growing through knowledge"
+          data-image="./assets/images/img-5.jpg"
+        >
+          <img src="./assets/images/img-5.jpg" alt="Growing through knowledge">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Learning</span>
+              <strong>Growing through knowledge</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="activities"
+          data-title="Learning beyond the classroom"
+          data-image="./assets/images/img-6.jpg"
+        >
+          <img src="./assets/images/img-6.jpg" alt="Learning beyond the classroom">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Activities</span>
+              <strong>Beyond the classroom</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="school-life"
+          data-title="Little moments"
+          data-image="./assets/images/img-7.jpg"
+        >
+          <img src="./assets/images/img-7.jpg" alt="Little moments">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>School life</span>
+              <strong>Little moments</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="events"
+          data-title="Moments to remember"
+          data-image="./assets/images/img-9.jpg"
+        >
+          <img src="./assets/images/img-9.jpg" alt="Moments to remember">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Events</span>
+              <strong>Moments to remember</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="learning"
+          data-title="Curiosity at work"
+          data-image="./assets/images/img-10.jpg"
+        >
+          <img src="./assets/images/img-10.jpg" alt="Curiosity at work">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Learning</span>
+              <strong>Curiosity at work</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="activities"
+          data-title="Learning through experience"
+          data-image="./assets/images/img-11.jpg"
+        >
+          <img src="./assets/images/img-11.jpg" alt="Learning through experience">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Activities</span>
+              <strong>Learning through experience</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="school-life"
+          data-title="Everyday Royalty Hall"
+          data-image="./assets/images/img-12.jpg"
+        >
+          <img src="./assets/images/img-12.jpg" alt="Everyday Royalty Hall">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>School life</span>
+              <strong>Everyday Royalty Hall</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="events"
+          data-title="A shared celebration"
+          data-image="./assets/images/img-13.jpg"
+        >
+          <img src="./assets/images/img-13.jpg" alt="A shared celebration">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Events</span>
+              <strong>A shared celebration</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="learning"
+          data-title="Discovering something new"
+          data-image="./assets/images/img-14.jpg"
+        >
+          <img src="./assets/images/img-14.jpg" alt="Discovering something new">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Learning</span>
+              <strong>Discovering something new</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="activities"
+          data-title="Growing together"
+          data-image="./assets/images/img-15.jpg"
+        >
+          <img src="./assets/images/img-15.jpg" alt="Growing together">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Activities</span>
+              <strong>Growing together</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="school-life"
+          data-title="Life at school"
+          data-image="./assets/images/img-16.jpg"
+        >
+          <img src="./assets/images/img-16.jpg" alt="Life at school">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>School life</span>
+              <strong>Life at school</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="events"
+          data-title="Special days"
+          data-image="./assets/images/img-17.jpg"
+        >
+          <img src="./assets/images/img-17.jpg" alt="Special days">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Events</span>
+              <strong>Special days</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="learning"
+          data-title="Young minds at work"
+          data-image="./assets/images/img-18.jpg"
+        >
+          <img src="./assets/images/img-18.jpg" alt="Young minds at work">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Learning</span>
+              <strong>Young minds at work</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="activities"
+          data-title="Discover. Explore. Grow."
+          data-image="./assets/images/img-19.jpg"
+        >
+          <img src="./assets/images/img-19.jpg" alt="Discover Explore Grow">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Activities</span>
+              <strong>Discover. Explore. Grow.</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="school-life"
+          data-title="Our everyday story"
+          data-image="./assets/images/img-20.jpg"
+        >
+          <img src="./assets/images/img-20.jpg" alt="Our everyday story">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>School life</span>
+              <strong>Our everyday story</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="events"
+          data-title="Together is better"
+          data-image="./assets/images/img-21.jpg"
+        >
+          <img src="./assets/images/img-21.jpg" alt="Together is better">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Events</span>
+              <strong>Together is better</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+
+        <article
+          class="gallery-item"
+          data-category="learning"
+          data-title="Building tomorrow"
+          data-image="./assets/images/img-22.jpg"
+        >
+          <img src="./assets/images/img-22.jpg" alt="Building tomorrow">
+
+          <div class="gallery-overlay">
+            <div class="gallery-overlay-content">
+              <span>Learning</span>
+              <strong>Building tomorrow</strong>
+            </div>
+          </div>
+
+          <div class="gallery-expand">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </div>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="gallery-cta section-shell">
+
+      <h2>
+        Every day is another
+        story worth telling.
+      </h2>
+
+      <a href="contact.html">
+        Come see us
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- LIGHTBOX -->
+  <div class="gallery-lightbox" id="lightbox">
+
+    <button
+      class="lightbox-close"
+      id="lightboxClose"
+      aria-label="Close image"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <button
+      class="lightbox-prev"
+      id="lightboxPrev"
+      aria-label="Previous image"
+    >
+      <i class="fa-solid fa-chevron-left"></i>
+    </button>
+
+    <div class="lightbox-image-wrap">
+
+      <img
+        class="lightbox-image"
+        id="lightboxImage"
+        src=""
+        alt=""
+      >
+
+    </div>
+
+    <button
+      class="lightbox-next"
+      id="lightboxNext"
+      aria-label="Next image"
+    >
+      <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+
+  </div>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-main section-shell">
+
+      <div>
+
+        <a href="index.html" class="brand footer-brand">
+
+          <img
+            src="./assets/images/rhs_logo.jpg"
+            alt="Royalty Hall Schools logo"
+          >
+
+          <span>Royalty Hall Schools</span>
+
+        </a>
+
+        <p>
+          Born to Win, Raised to Lead.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a href="about.html">About us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="facilities.html">Facilities</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>School</h4>
+
+        <a href="management.html">Management</a>
+        <a href="register.html">Admissions</a>
+        <a href="contact.html">Contact us</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Connect</h4>
+
+        <p>
+          Have questions about Royalty Hall Schools?
+        </p>
+
+        <a
+          href="contact.html"
+          class="footer-contact"
+        >
+          Get in touch
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="social-links">
+
+          <a
+            href="https://wa.me/+2348032084172"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61563866310341"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom section-shell">
+
+      <span>
+        © 2026 Royalty Hall Schools. All rights reserved.
+      </span>
+
+      <span>
+        Built with purpose.
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /* =========================================================
+       MOBILE NAV
+    ========================================================= */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+
+      menuToggle.addEventListener("click", () => {
+
+        const isOpen = navLinks.classList.toggle("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen
+        );
+
+        menuToggle.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+
+      });
+
+    }
+
+
+    /* =========================================================
+       GALLERY FILTERS
+    ========================================================= */
+
+    const filters = document.querySelectorAll(".gallery-filter");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filters.forEach(filter => {
+
+      filter.addEventListener("click", () => {
+
+        filters.forEach(item => {
+          item.classList.remove("active");
+        });
+
+        filter.classList.add("active");
+
+        const selected = filter.dataset.filter;
+
+        galleryItems.forEach(item => {
+
+          if (
+            selected === "all" ||
+            item.dataset.category === selected
+          ) {
+
+            item.style.display = "block";
+
+          } else {
+
+            item.style.display = "none";
+
+          }
+
+        });
+
+      });
+
+    });
+
+
+    /* =========================================================
+       LIGHTBOX
+    ========================================================= */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxCaption = document.getElementById("lightboxCaption");
+    const lightboxClose = document.getElementById("lightboxClose");
+    const lightboxPrev = document.getElementById("lightboxPrev");
+    const lightboxNext = document.getElementById("lightboxNext");
+
+    let currentIndex = 0;
+
+    function getVisibleItems() {
+
+      return Array.from(galleryItems)
+        .filter(item => item.style.display !== "none");
+
+    }
+
+
+    function openLightbox(item) {
+
+      const visibleItems = getVisibleItems();
+
+      currentIndex = visibleItems.indexOf(item);
+
+      if (currentIndex < 0) {
+        currentIndex = 0;
+      }
+
+      updateLightbox();
+
+      lightbox.classList.add("open");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    function updateLightbox() {
+
+      const visibleItems = getVisibleItems();
+
+      if (!visibleItems.length) return;
+
+      const item = visibleItems[currentIndex];
+
+      lightboxImage.src = item.dataset.image;
+      lightboxImage.alt = item.dataset.title;
+
+      lightboxCaption.textContent =
+        item.dataset.title;
+
+    }
+
+
+    function closeLightbox() {
+
+      lightbox.classList.remove("open");
+
+      document.body.style.overflow = "";
+
+    }
+
+
+    galleryItems.forEach(item => {
+
+      item.addEventListener("click", () => {
+        openLightbox(item);
+      });
+
+    });
+
+
+    lightboxClose.addEventListener(
+      "click",
+      closeLightbox
+    );
+
+
+    lightbox.addEventListener("click", event => {
+
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+
+    });
+
+
+    lightboxPrev.addEventListener("click", () => {
+
+      const visibleItems = getVisibleItems();
+
+      currentIndex =
+        (currentIndex - 1 + visibleItems.length)
+        % visibleItems.length;
+
+      updateLightbox();
+
+    });
+
+
+    lightboxNext.addEventListener("click", () => {
+
+      const visibleItems = getVisibleItems();
+
+      currentIndex =
+        (currentIndex + 1)
+        % visibleItems.length;
+
+      updateLightbox();
+
+    });
+
+
+    document.addEventListener("keydown", event => {
+
+      if (!lightbox.classList.contains("open")) {
+        return;
+      }
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "ArrowLeft") {
+        lightboxPrev.click();
+      }
+
+      if (event.key === "ArrowRight") {
+        lightboxNext.click();
+      }
+
+    });
+
+
+    /* =========================================================
+       FEATURED MOMENT
+    ========================================================= */
+
+    const featuredImage =
+      document.getElementById("featuredImage");
+
+    const featuredOpen =
+      document.getElementById("featuredOpen");
+
+    const featuredTitle =
+      document.getElementById("featuredTitle");
+
+    const featuredText =
+      document.getElementById("featuredText");
+
+    let featuredItem =
+      document.querySelector('.gallery-item[data-image="./assets/images/img-8.jpg"]');
+
+
+    featuredOpen.addEventListener("click", () => {
+
+      if (featuredItem) {
+        openLightbox(featuredItem);
+      }
+
+    });
+
+
+    /* =========================================================
+       SHUFFLE
+    ========================================================= */
+
+    const shuffleBtn =
+      document.getElementById("shuffleBtn");
+
+    shuffleBtn.addEventListener("click", () => {
+
+      const items = Array.from(galleryItems);
+
+      items.sort(() => Math.random() - .5);
+
+      const grid =
+        document.getElementById("galleryGrid");
+
+      items.forEach(item => {
+        grid.appendChild(item);
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
