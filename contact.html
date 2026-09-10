@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact Us | Royalty Hall Schools</title>
+
+  <!-- Existing site stylesheet -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+    /* =========================================================
+       CONTACT PAGE
+       ========================================================= */
+
+    .contact-page {
+      min-height: 100vh;
+    }
+
+    /* HERO */
+
+    .contact-hero {
+      position: relative;
+      min-height: 58vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 120px 0 70px;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(25, 0, 44, .88),
+          rgba(40, 2, 71, .55)
+        ),
+        url("./assets/images/img-18.jpg") center/cover no-repeat;
+    }
+
+    .contact-hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      right: -120px;
+      top: -120px;
+      background: rgba(140, 3, 252, .25);
+      filter: blur(20px);
+    }
+
+    .contact-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      color: #fff;
+    }
+
+    .contact-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .contact-kicker::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--bright);
+    }
+
+    .contact-hero h1 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(44px, 7vw, 84px);
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .contact-hero p {
+      max-width: 590px;
+      margin-top: 24px;
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgba(255,255,255,.8);
+    }
+
+    /* INTRO */
+
+    .contact-intro {
+      padding: 90px 0 45px;
+    }
+
+    .contact-intro h2 {
+      max-width: 760px;
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 5vw, 55px);
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+
+    .contact-intro p {
+      max-width: 680px;
+      margin-top: 20px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* CONTACT CARDS */
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      padding-bottom: 80px;
+    }
+
+    .contact-card {
+      position: relative;
+      min-height: 190px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: rgba(255,255,255,.65);
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+      border-color: rgba(140,3,252,.25);
+    }
+
+    .contact-card-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      border-radius: 14px;
+      background: var(--pale);
+      color: var(--purple);
+      font-size: 19px;
+    }
+
+    .contact-card h3 {
+      margin: 0 0 8px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 20px;
+    }
+
+    .contact-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .contact-card a {
+      color: var(--purple);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: var(--bright);
+    }
+
+    .contact-card-arrow {
+      position: absolute;
+      right: 25px;
+      top: 27px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* MAIN CONTACT AREA */
+
+    .contact-main {
+      padding: 30px 0 100px;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .contact-info h2,
+    .contact-form-wrap h2 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .contact-info > p {
+      margin: 18px 0 30px;
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    /* ADDRESS */
+
+    .contact-address {
+      display: flex;
+      gap: 16px;
+      padding: 22px;
+      margin-bottom: 15px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(40,2,71,.07);
+    }
+
+    .contact-address-icon {
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      background: var(--pale);
+      color: var(--bright);
+    }
+
+    .contact-address strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 14px;
+    }
+
+    .contact-address span {
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.65;
+    }
+
+    /* SOCIAL CARD */
+
+    .contact-social-card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      margin-top: 15px;
+      border-radius: 18px;
+      background: var(--purple);
+      color: #fff;
+      text-decoration: none;
+      transition: transform .25s ease;
+    }
+
+    .contact-social-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .contact-social-card > i:first-child {
+      width: 42px;
+      height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255,255,255,.12);
+      font-size: 18px;
+    }
+
+    .contact-social-card div {
+      flex: 1;
+    }
+
+    .contact-social-card span {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      opacity: .65;
+    }
+
+    .contact-social-card strong {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 14px;
+    }
+
+    .contact-social-card > i:last-child {
+      font-size: 12px;
+      opacity: .7;
+    }
+
+    /* FORM */
+
+    .contact-form-wrap {
+      padding: 35px;
+      border-radius: 28px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form-wrap > p {
+      margin: 15px 0 28px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 17px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-group label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--purple);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 13px 14px;
+      outline: none;
+      background: #faf8fc;
+      color: var(--ink);
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--bright);
+      box-shadow: 0 0 0 3px rgba(140,3,252,.08);
+    }
+
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 0;
+      border-radius: 12px;
+      padding: 14px 22px;
+      background: var(--bright);
+      color: #fff;
+      font-family: "DM Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .contact-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 25px rgba(140,3,252,.22);
+    }
+
+    /* MAP */
+
+    .map-section {
+      padding: 0 0 100px;
+    }
+
+    .map-heading {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 30px;
+      margin-bottom: 25px;
+    }
+
+    .map-heading h2 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .map-heading p {
+      max-width: 390px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .contact-map {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 26px;
+      background: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-map iframe {
+      display: block;
+      width: 100%;
+      min-height: 500px;
+      border: 0;
+    }
+
+    .map-note {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .map-note i {
+      color: var(--bright);
+    }
+
+    /* WHATSAPP CTA */
+
+    .contact-cta {
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 100px;
+      padding: 65px 40px;
+      border-radius: 30px;
+      background: var(--purple);
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-cta::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      right: -100px;
+      top: -120px;
+      background: rgba(140,3,252,.25);
+    }
+
+    .contact-cta > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-cta h2 {
+      margin: 0;
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(30px, 5vw, 52px);
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .contact-cta p {
+      max-width: 560px;
+      margin: 17px auto 27px;
+      color: rgba(255,255,255,.72);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 21px;
+      border-radius: 999px;
+      background: #fff;
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER SOCIALS */
+
+    .social-links {
+      display: flex !important;
+      align-items: center;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .social-links a {
+      width: 42px;
+      height: 42px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: var(--pale);
+      color: var(--purple);
+      text-decoration: none;
+      font-size: 17px;
+      transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .social-links a:hover {
+      background: var(--bright);
+      color: #fff;
+      transform: translateY(-3px);
+    }
+
+    /* =========================================================
+       SCROLL SAFETY
+       ========================================================= */
+
+    html {
+      height: auto !important;
+      min-height: 100%;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+    }
+
+    body {
+      height: auto !important;
+      min-height: 100vh;
+      overflow-x: hidden !important;
+      overflow-y: auto !important;
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .contact-cards {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .map-heading {
+        display: block;
+      }
+
+      .map-heading p {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .contact-hero {
+        min-height: 55vh;
+        padding: 105px 0 50px;
+      }
+
+      .contact-intro {
+        padding: 65px 0 35px;
+      }
+
+      .contact-cards {
+        padding-bottom: 60px;
+      }
+
+      .contact-main {
+        padding-bottom: 70px;
+      }
+
+      .contact-form-wrap {
+        padding: 25px 20px;
+        border-radius: 22px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-map,
+      .contact-map iframe {
+        min-height: 380px;
+      }
+
+      .map-section {
+        padding-bottom: 70px;
+      }
+
+      .contact-cta {
+        margin-bottom: 70px;
+        padding: 45px 22px;
+        border-radius: 24px;
+      }
+
+      .social-links {
+        width: 100%;
+      }
+
+      .social-links a {
+        width: 42px;
+        height: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+
+  <!-- =======================================================
+       NAVBAR
+       ======================================================= -->
+
+  <header class="navbar">
+
+    <a href="index.html" class="brand" aria-label="Royalty Hall Schools home">
+      <img
+        src="./assets/images/rhs_logo.jpg"
+        alt="Royalty Hall Schools logo"
+      >
+      <span>Royalty Hall Schools</span>
+    </a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+
+      <a href="index.html">Home</a>
+
+      <a href="about.html">
+        About us
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <a href="gallery.html">Gallery</a>
+
+      <a href="facilities.html">Facilities</a>
+
+      <a href="management.html">Management</a>
+
+      <a href="contact.html" class="active">Contact us</a>
+
+      <a href="register.html" class="register-btn">Register</a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
+  <main>
+
+    <section class="contact-hero">
+
+      <div class="section-shell contact-hero-content">
+
+        <span class="contact-kicker">
+          Get in touch
+        </span>
+
+        <h1>
+          Let's start<br>
+          a conversation.
+        </h1>
+
+        <p>
+          Whether you're looking to enrol your child, learn more about
+          Royalty Hall Schools, or simply have a question, we'd be happy
+          to hear from you.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         INTRO
+         ===================================================== -->
+
+    <section class="contact-intro">
+
+      <div class="section-shell">
+
+        <h2>
+          We're always happy<br>
+          to hear from you.
+        </h2>
+
+        <p>
+          Reach out to Royalty Hall Schools through any of the channels
+          below. For the quickest response, you can contact us directly
+          on WhatsApp.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT CARDS
+         ===================================================== -->
+
+    <section class="section-shell">
+
+      <div class="contact-cards">
+
+        <!-- WhatsApp -->
+
+        <div class="contact-card">
+
+          <div class="contact-card-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+          </div>
+
+          <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+
+          <h3>WhatsApp</h3>
+
+          <p>
+            Send us a message directly and we'll get back to you.
+            <br><br>
+
+            <a
+              href="https://wa.me/+2348032084172"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              +234 803 208 4172
+            </a>
+          </p>
+
+        </div>
+
+
+        <!-- Facebook -->
+
+        <div class="contact-card">
+
+          <div class="contact-card-icon">
+            <i class="fa-brands fa-facebook-f"></i>
+          </div>
+
+          <i class="fa-solid fa-arrow-up-right-from-square contact-card-arrow"></i>
+
+          <h3>Facebook</h3>
+
+          <p>
+            Follow Royalty Hall Schools for school updates,
+            activities and announcements.
+            <br><br>
+
+            <a
+              href="https://www.facebook.com/profile.php?id=61563866310341"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit our Facebook page
+            </a>
+          </p>
+
+        </div>
+
+
+        <!-- Location -->
+
+        <div class="contact-card">
+
+          <div class="contact-card-icon">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <h3>Visit us</h3>
+
+          <p>
+            9, Graceland Street,
+            (Former Sarkis Building),
+            Off Somorin Street,
+            Obantoko, Abeokuta.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT FORM + INFORMATION
+         ===================================================== -->
+
+    <section class="contact-main">
+
+      <div class="section-shell contact-layout">
+
+
+        <!-- LEFT -->
+
+        <div class="contact-info">
+
+          <h2>
+            Have a question?
+          </h2>
+
+          <p>
+            Tell us what you'd like to know and a member of our team
+            will get back to you.
+          </p>
+
+
+          <div class="contact-address">
+
+            <div class="contact-address-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+
+              <strong>School address</strong>
+
+              <span>
+                9, Graceland Street (Former Sarkis Building),<br>
+                Off Somorin Street, Obantoko,<br>
+                Abeokuta, Ogun State, Nigeria.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="contact-address">
+
+            <div class="contact-address-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <div>
+
+              <strong>WhatsApp</strong>
+
+              <span>
+                <a
+                  href="https://wa.me/+2348032084172"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  +234 803 208 4172
+                </a>
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <!-- Facebook -->
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61563866310341"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-social-card"
+          >
+
+            <i class="fa-brands fa-facebook-f"></i>
+
+            <div>
+
+              <span>Facebook</span>
+
+              <strong>Follow Royalty Hall Schools</strong>
+
+            </div>
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+          </a>
+
+        </div>
+
+
+        <!-- RIGHT: FORM -->
+
+        <div class="contact-form-wrap">
+
+          <h2>Send us a message.</h2>
+
+          <p>
+            Fill out the form below and we'll get back to you as soon
+            as possible.
+          </p>
+
+          <form class="contact-form" id="contactForm">
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="name">Full name</label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">Phone number</label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Your phone number"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">Email address</label>
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+              >
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="subject">What can we help with?</label>
+
+              <select id="subject" name="subject">
+
+                <option value="">
+                  Select an option
+                </option>
+
+                <option value="admission">
+                  Admission / Enrolment
+                </option>
+
+                <option value="school-information">
+                  School information
+                </option>
+
+                <option value="fees">
+                  Fees & payments
+                </option>
+
+                <option value="general">
+                  General enquiry
+                </option>
+
+                <option value="other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">Message</label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="How can we help?"
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="contact-submit"
+            >
+              Send message
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         LIVE MAP
+         ===================================================== -->
+
+    <section class="map-section">
+
+      <div class="section-shell">
+
+        <div class="map-heading">
+
+          <h2>
+            Find us.
+          </h2>
+
+          <p>
+            We're located on Graceland Street, just off Somorin Street
+            in Obantoko, Abeokuta.
+          </p>
+
+        </div>
+
+
+        <div class="contact-map">
+
+          <iframe
+            src="https://www.google.com/maps?q=Somorin+Street,+Obantoko,+Abeokuta,+Ogun+State,+Nigeria&output=embed"
+            width="100%"
+            height="500"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+
+        </div>
+
+
+        <div class="map-note">
+
+          <i class="fa-solid fa-circle-info"></i>
+
+          <span>
+            The map currently uses Somorin Street as a temporary location
+            marker. This can be updated once the school's exact Google
+            Business location is approved.
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WHATSAPP CTA
+         ===================================================== -->
+
+    <section class="section-shell">
+
+      <div class="contact-cta">
+
+        <h2>
+          Prefer a quick chat?
+        </h2>
+
+        <p>
+          Reach us directly on WhatsApp. It's the easiest way to ask
+          questions and get a quick response from the school.
+        </p>
+
+        <a
+          href="https://wa.me/+2348032084172"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-btn"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+          Chat with us on WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer class="footer">
+
+    <div class="footer-main section-shell">
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <a
+          href="index.html"
+          class="brand footer-brand"
+        >
+
+          <img
+            src="./assets/images/rhs_logo.jpg"
+            alt="Royalty Hall Schools logo"
+          >
+
+          <span>Royalty Hall Schools</span>
+
+        </a>
+
+        <p>
+          Building a wholesome child through sound academic education,
+          godly spiritual edification, and excellent moral upbringing.
+        </p>
+
+
+        <!-- SOCIAL ICONS -->
+
+        <div class="social-links">
+
+          <a
+            href="https://wa.me/+2348032084172"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61563866310341"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- EXPLORE -->
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About us</a>
+
+        <a href="gallery.html">Gallery</a>
+
+        <a href="facilities.html">Facilities</a>
+
+      </div>
+
+
+      <!-- SCHOOL -->
+
+      <div>
+
+        <h4>School</h4>
+
+        <a href="management.html">Management</a>
+
+        <a href="contact.html">Contact us</a>
+
+        <a href="register.html">Register</a>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div>
+
+        <h4>Contact</h4>
+
+        <a
+          href="https://wa.me/+2348032084172"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-contact"
+        >
+          WhatsApp us
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61563866310341"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Facebook
+        </a>
+
+        <a
+          href="https://www.google.com/maps?q=Somorin+Street,+Obantoko,+Abeokuta,+Ogun+State,+Nigeria"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Find us
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom section-shell">
+
+      <span>
+        © 2026 Royalty Hall Schools. All rights reserved.
+      </span>
+
+      <span>
+        Excellence · Godliness · Positivity · Faith
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    /* Mobile navigation */
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuToggle && navLinks) {
+
+      menuToggle.addEventListener("click", () => {
+
+        const isOpen = navLinks.classList.toggle("open");
+
+        menuToggle.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+        menuToggle.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+
+      });
+
+
+      /* Close menu after clicking a link */
+
+      navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+          navLinks.classList.remove("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          menuToggle.innerHTML =
+            '<i class="fa-solid fa-bars"></i>';
+
+        });
+
+      });
+
+    }
+
+
+    /* Contact form */
+
+    const contactForm = document.getElementById("contactForm");
+
+    if (contactForm) {
+
+      contactForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const name =
+          document.getElementById("name").value.trim();
+
+        const phone =
+          document.getElementById("phone").value.trim();
+
+        const subject =
+          document.getElementById("subject").value;
+
+        const message =
+          document.getElementById("message").value.trim();
+
+
+        /*
+          Temporary behaviour:
+          Open WhatsApp with the submitted message.
+
+          This means the form actually does something even before
+          you connect a backend/email service.
+        */
+
+        const text =
+          "Hello Royalty Hall Schools.%0A%0A" +
+          "Name: " + encodeURIComponent(name) + "%0A" +
+          "Phone: " + encodeURIComponent(phone) + "%0A" +
+          "Subject: " + encodeURIComponent(subject || "General enquiry") + "%0A%0A" +
+          "Message: " + encodeURIComponent(message);
+
+        const whatsappURL =
+          "https://wa.me/2348032084172?text=" + text;
+
+        window.open(
+          whatsappURL,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+      });
+
+    }
+
+
+    /*
+      Extra scroll protection.
+
+      Nothing on this page should permanently lock the document.
+    */
+
+    window.addEventListener("pageshow", () => {
+
+      document.documentElement.style.overflowY = "auto";
+      document.body.style.overflowY = "auto";
+
+    });
+
+  </script>
+
+</body>
+</html>
