@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Register | Royalty Hall Schools</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+  ====================================================== -->
+
+  <header class="navbar">
+
+    <a href="index.html" class="brand" aria-label="Royalty Hall Schools home">
+
+      <img
+        src="./assets/images/rhs_logo.jpg"
+        alt="Royalty Hall Schools logo"
+      >
+
+      <span>Royalty Hall Schools</span>
+
+    </a>
+
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      aria-label="Open navigation"
+      aria-expanded="false"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+
+    <nav
+      class="nav-links"
+      id="navLinks"
+      aria-label="Main navigation"
+    >
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="about.html">
+        About us
+        <i class="fa-solid fa-chevron-down"></i>
+      </a>
+
+      <a href="gallery.html">
+        Facilities
+      </a>
+
+      <a href="management.html">
+        Management
+      </a>
+
+      <a href="contact.html">
+        Contact us
+      </a>
+
+      <a href="register.html" class="register-btn active">
+        Register
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       REGISTRATION HERO
+  ====================================================== -->
+
+  <main class="register-page">
+
+    <section class="register-hero">
+
+      <div class="register-hero-content">
+
+        <span class="register-tag">
+          Admissions
+        </span>
+
+        <h1>
+          Give your child a
+          <span>Royal start.</span>
+        </h1>
+
+        <p>
+          Begin your child's journey at Royalty Hall Schools by
+          completing our registration form. Please provide accurate
+          information in each section.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FORM
+    ====================================================== -->
+
+    <section class="register-section">
+
+      <div class="register-container">
+
+
+        <!-- FORM INTRO -->
+
+        <div class="register-intro">
+
+          <div>
+            <span class="section-label">
+              Registration Form
+            </span>
+
+            <h2>
+              Child Registration
+            </h2>
+          </div>
+
+          <p>
+            Fields marked with <strong>*</strong> are required.
+          </p>
+
+        </div>
+
+
+
+        <form class="school-registration-form" id="registrationForm">
+
+
+          <!-- =================================================
+               STEP 1 — PUPIL INFORMATION
+          ================================================== -->
+
+          <section class="form-section">
+
+            <div class="form-section-heading">
+
+              <span class="form-number">
+                01
+              </span>
+
+              <div>
+                <h3>Pupil's Information</h3>
+
+                <p>
+                  Tell us about the child you are registering.
+                </p>
+              </div>
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+              <div class="field full-width">
+
+                <label for="pupil-name">
+                  Pupil's Full Name <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="pupil-name"
+                  name="pupil_name"
+                  placeholder="Enter your child's full name"
+                  required
+                >
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="school-level">
+                  Level <span>*</span>
+                </label>
+
+                <select
+                  id="school-level"
+                  name="school_level"
+                  required
+                >
+
+                  <option value="" disabled selected>
+                    Select level
+                  </option>
+
+                  <option value="creche">
+                    Creche
+                  </option>
+
+                  <option value="kindergarten">
+                    Kindergarten
+                  </option>
+
+                  <option value="nursery">
+                    Nursery
+                  </option>
+
+                  <option value="primary">
+                    Primary
+                  </option>
+
+                </select>
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="pupil-class">
+                  Child's Class <span>*</span>
+                </label>
+
+                <input
+                  type="text"
+                  id="pupil-class"
+                  name="pupil_class"
+                  placeholder="e.g. Primary 3"
+                  required
+                >
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label for="date-of-birth">
+                  Date of Birth <span>*</span>
+                </label>
+
+                <input
+                  type="date"
+                  id="date-of-birth"
+                  name="date_of_birth"
+                  required
+                >
+
+              </div>
+
+
+
+              <div class="field">
+
+                <label>
+                  Gender <span>*</span>
+                </label>
+
+                <div class="choice-group">
+
+                  <label class="choice">
+
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="male"
+                      required
+                    >
+
+                    <span>Male</span>
+
+                  </label>
+
+
+                  <label class="choice">
+
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="female"
+                    >
+
+                    <span>Female</span>
+
+                  </label>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               STEP 2 — PARENTS
+          ================================================== -->
+
+          <section class="form-section">
+
+            <div class="form-section-heading">
+
+              <span class="form-number">
+                02
+              </span>
+
+              <div>
+                <h3>Parents' / Guardians' Information</h3>
+
+                <p>
+                  Provide the contact and occupation details of the
+                  child's parents or guardians.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- FATHER -->
+
+            <div class="parent-card">
+
+              <div class="parent-card-title">
+
+                <div class="parent-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                  <h4>Father's Information</h4>
+                  <p>Father or male guardian</p>
+                </div>
+
+              </div>
+
+
+              <div class="form-grid">
+
+                <div class="field full-width">
+
+                  <label for="father-name">
+                    Father's Name <span>*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="father-name"
+                    name="father_name"
+                    placeholder="Enter father's full name"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="father-phone">
+                    Phone Number <span>*</span>
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="father-phone"
+                    name="father_phone"
+                    placeholder="Enter phone number"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="father-occupation">
+                    Occupation <span>*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="father-occupation"
+                    name="father_occupation"
+                    placeholder="Enter occupation"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field full-width">
+
+                  <label for="father-address">
+                    Home Address <span>*</span>
+                  </label>
+
+                  <textarea
+                    id="father-address"
+                    name="father_address"
+                    placeholder="Enter home address"
+                    rows="3"
+                    required
+                  ></textarea>
+
+                </div>
+
+
+                <div class="field full-width">
+
+                  <label for="father-workplace">
+                    Workplace Address <span>*</span>
+                  </label>
+
+                  <textarea
+                    id="father-workplace"
+                    name="father_workplace"
+                    placeholder="Enter workplace address"
+                    rows="3"
+                    required
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+
+            <!-- MOTHER -->
+
+            <div class="parent-card">
+
+              <div class="parent-card-title">
+
+                <div class="parent-icon">
+                  <i class="fa-solid fa-user"></i>
+                </div>
+
+                <div>
+                  <h4>Mother's Information</h4>
+                  <p>Mother or female guardian</p>
+                </div>
+
+              </div>
+
+
+              <div class="form-grid">
+
+                <div class="field full-width">
+
+                  <label for="mother-name">
+                    Mother's Name <span>*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="mother-name"
+                    name="mother_name"
+                    placeholder="Enter mother's full name"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="mother-phone">
+                    Phone Number <span>*</span>
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="mother-phone"
+                    name="mother_phone"
+                    placeholder="Enter phone number"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field">
+
+                  <label for="mother-occupation">
+                    Occupation <span>*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    id="mother-occupation"
+                    name="mother_occupation"
+                    placeholder="Enter occupation"
+                    required
+                  >
+
+                </div>
+
+
+                <div class="field full-width">
+
+                  <label for="mother-address">
+                    Home Address <span>*</span>
+                  </label>
+
+                  <textarea
+                    id="mother-address"
+                    name="mother_address"
+                    placeholder="Enter home address"
+                    rows="3"
+                    required
+                  ></textarea>
+
+                </div>
+
+
+                <div class="field full-width">
+
+                  <label for="mother-workplace">
+                    Workplace Address <span>*</span>
+                  </label>
+
+                  <textarea
+                    id="mother-workplace"
+                    name="mother_workplace"
+                    placeholder="Enter workplace address"
+                    rows="3"
+                    required
+                  ></textarea>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               STEP 3 — HEALTH
+          ================================================== -->
+
+          <section class="form-section">
+
+            <div class="form-section-heading">
+
+              <span class="form-number">
+                03
+              </span>
+
+              <div>
+                <h3>Health & Additional Information</h3>
+
+                <p>
+                  Help us understand any health or special considerations
+                  concerning your child.
+                </p>
+              </div>
+
+            </div>
+
+
+
+            <!-- AILMENT -->
+
+            <div class="question-block">
+
+              <label class="question-title">
+                Does the child have any ailment?
+                <span>*</span>
+              </label>
+
+              <div class="choice-group">
+
+                <label class="choice">
+
+                  <input
+                    type="radio"
+                    name="has_ailment"
+                    value="yes"
+                    required
+                  >
+
+                  <span>Yes</span>
+
+                </label>
+
+
+                <label class="choice">
+
+                  <input
+                    type="radio"
+                    name="has_ailment"
+                    value="no"
+                  >
+
+                  <span>No</span>
+
+                </label>
+
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="ailment">
+                If yes, state the ailment
+              </label>
+
+              <input
+                type="text"
+                id="ailment"
+                name="ailment"
+                placeholder="Enter ailment"
+              >
+
+            </div>
+
+
+
+            <!-- PHYSICAL CHALLENGE -->
+
+            <div class="question-block">
+
+              <label class="question-title">
+                Is the child physically challenged?
+                <span>*</span>
+              </label>
+
+              <div class="choice-group">
+
+                <label class="choice">
+
+                  <input
+                    type="radio"
+                    name="physical_challenge"
+                    value="yes"
+                    required
+                  >
+
+                  <span>Yes</span>
+
+                </label>
+
+
+                <label class="choice">
+
+                  <input
+                    type="radio"
+                    name="physical_challenge"
+                    value="no"
+                  >
+
+                  <span>No</span>
+
+                </label>
+
+              </div>
+
+            </div>
+
+
+            <div class="field">
+
+              <label for="challenge">
+                If yes, state the challenge
+              </label>
+
+              <input
+                type="text"
+                id="challenge"
+                name="physical_challenge_details"
+                placeholder="Enter physical challenge"
+              >
+
+            </div>
+
+
+
+            <!-- ADDITIONAL INFORMATION -->
+
+            <div class="field">
+
+              <label for="additional-information">
+                Is there any other information that the school should know?
+              </label>
+
+              <textarea
+                id="additional-information"
+                name="additional_information"
+                placeholder="Enter any additional information"
+                rows="5"
+              ></textarea>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               STEP 4 — DECLARATION
+          ================================================== -->
+
+          <section class="declaration-section">
+
+            <div class="declaration-box">
+
+              <div class="declaration-icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+
+              <div>
+
+                <h3>Declaration</h3>
+
+                <label class="declaration-check">
+
+                  <input
+                    type="checkbox"
+                    id="declaration"
+                    name="declaration"
+                    required
+                  >
+
+                  <span>
+                    I agree that every information provided here is
+                    correct. I bear full responsibility for any
+                    misinformation in this form.
+                  </span>
+
+                </label>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+
+          <!-- =================================================
+               SUBMIT
+          ================================================== -->
+
+          <div class="registration-submit">
+
+            <p>
+              Please review your information before submitting.
+            </p>
+
+            <button type="submit">
+
+              Submit Registration
+
+              <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+          </div>
+
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
+  <footer class="footer">
+
+    <div class="footer-main section-shell">
+
+
+      <div>
+
+        <a href="index.html" class="brand footer-brand">
+
+          <img
+            src="./assets/images/rhs_logo.jpg"
+            alt="Royalty Hall Schools logo"
+          >
+
+          <span>Royalty Hall Schools</span>
+
+        </a>
+
+        <p>
+          Building a wholesome child through sound academic education,
+          godly spiritual edification, and excellent moral upbringing.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h4>Explore</h4>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="gallery.html">Facilities</a>
+        <a href="management.html">Management</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Quick links</h4>
+
+        <a href="contact.html">Contact us</a>
+        <a href="register.html">Register</a>
+
+      </div>
+
+
+      <div>
+
+        <h4>Contact</h4>
+
+        <a href="mailto:royaltyhallschools1@gmail.com">
+          royaltyhallschools1@gmail.com
+        </a>
+
+        <a
+          href="https://wa.me/+2348032084172"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-contact"
+        >
+          WhatsApp
+        </a>
+
+        <a
+          href="https://www.facebook.com/profile.php?id=61563866310341"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-contact"
+        >
+          Facebook
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom section-shell">
+
+      <span>
+        © 2026 Royalty Hall Schools. All rights reserved.
+      </span>
+
+      <span>
+        Excellence · Godliness · Positivity · Faith
+      </span>
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       MOBILE NAVIGATION
+  ====================================================== -->
+
+  <script>
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+
+      const isOpen = navLinks.classList.toggle('open');
+
+      menuToggle.setAttribute(
+        'aria-expanded',
+        isOpen
+      );
+
+      menuToggle.setAttribute(
+        'aria-label',
+        isOpen
+          ? 'Close navigation'
+          : 'Open navigation'
+      );
+
+      menuToggle.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+
+    });
+
+
+    navLinks.querySelectorAll('a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        navLinks.classList.remove('open');
+
+        menuToggle.setAttribute(
+          'aria-expanded',
+          'false'
+        );
+
+        menuToggle.setAttribute(
+          'aria-label',
+          'Open navigation'
+        );
+
+        menuToggle.innerHTML =
+          '<i class="fa-solid fa-bars"></i>';
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
